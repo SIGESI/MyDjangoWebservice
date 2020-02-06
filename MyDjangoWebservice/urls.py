@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from MyDjangoWebservice import view
+from myApp_1 import testdb
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/',view.hello ),
+    path('testdb/',testdb.testdb),
 ]
