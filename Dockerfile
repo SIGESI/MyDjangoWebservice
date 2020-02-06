@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 
-VOLUME ["/MyDjangoWebservice"]
+VOLUME ["/usr/src/app/MyDjangoWebservice"]
 
 ENTRYPOINT ["python", "manage.py"]
 
