@@ -18,9 +18,33 @@ from django.urls import path
 
 from MyDjangoWebservice import view
 from myApp_1 import testdb
+from myApp_1.views import time
 
+from myApp_2_login.views import login # or from myApp_2_login import views
+from myApp_2_login.views import login_action
+
+from myApp_3_home.views import index,index_action
+
+from myApp_4_algo1.views import algo1, algo1_upload
+
+#Note the path to find the default welcome page
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #app1 test
     path('hello/',view.hello ),
     path('testdb/',testdb.testdb),
+    path('time/', time),
+
+    #app2 login
+    path('login/',login),
+    path('login_action/',login_action),
+
+    #app3 index
+    path('index/', index),
+    path('index_action/', index_action),
+
+    #app4 algo1
+    path('algo1/', algo1),
+    path('algo1_upload/', algo1_upload),
+
 ]
