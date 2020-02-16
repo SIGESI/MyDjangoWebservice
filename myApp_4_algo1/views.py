@@ -13,9 +13,9 @@ def algo1_upload(request):
     File = request.FILES.get("myfile", None)
     image_path = "./myApp_4_algo1/images/"+"%s"%File.name #+ "%s" % File.name
 
-    # 打开特定的文件进行二进制的写操作;
+    # open file to write
     with open(image_path, 'wb+') as f:
-        # 分块写入文件;
+        # Write to file in chunks
         for chunk in File.chunks():
             f.write(chunk)
     category="dog"
